@@ -10,10 +10,12 @@
 		F45693A22C2D9B3100444967 /* casinoslotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693A12C2D9B3100444967 /* casinoslotApp.swift */; };
 		F45693A42C2D9B3100444967 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693A32C2D9B3100444967 /* ContentView.swift */; };
 		F45693A62C2D9B3300444967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45693A52C2D9B3300444967 /* Assets.xcassets */; };
-		F45693A92C2D9B3300444967 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45693A82C2D9B3300444967 /* Preview Assets.xcassets */; };
 		F45693B32C2D9B3300444967 /* casinoslotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693B22C2D9B3300444967 /* casinoslotTests.swift */; };
 		F45693BD2C2D9B3300444967 /* casinoslotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693BC2C2D9B3300444967 /* casinoslotUITests.swift */; };
 		F45693BF2C2D9B3300444967 /* casinoslotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693BE2C2D9B3300444967 /* casinoslotUITestsLaunchTests.swift */; };
+		F45693CF2C2D9BBA00444967 /* HOMEVIEW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693CE2C2D9BBA00444967 /* HOMEVIEW.swift */; };
+		F45693D12C2D9D1D00444967 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D02C2D9D1D00444967 /* HeaderView.swift */; };
+		F45693D32C2DFCBA00444967 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D22C2DFCBA00444967 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +40,14 @@
 		F45693A12C2D9B3100444967 /* casinoslotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casinoslotApp.swift; sourceTree = "<group>"; };
 		F45693A32C2D9B3100444967 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F45693A52C2D9B3300444967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F45693A82C2D9B3300444967 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F45693AE2C2D9B3300444967 /* casinoslotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = casinoslotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45693B22C2D9B3300444967 /* casinoslotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casinoslotTests.swift; sourceTree = "<group>"; };
 		F45693B82C2D9B3300444967 /* casinoslotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = casinoslotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45693BC2C2D9B3300444967 /* casinoslotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casinoslotUITests.swift; sourceTree = "<group>"; };
 		F45693BE2C2D9B3300444967 /* casinoslotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casinoslotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F45693CE2C2D9BBA00444967 /* HOMEVIEW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOMEVIEW.swift; sourceTree = "<group>"; };
+		F45693D02C2D9D1D00444967 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F45693D22C2DFCBA00444967 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,20 +98,12 @@
 		F45693A02C2D9B3100444967 /* casinoslot */ = {
 			isa = PBXGroup;
 			children = (
+				F45693CD2C2D9BA500444967 /* View */,
 				F45693A12C2D9B3100444967 /* casinoslotApp.swift */,
 				F45693A32C2D9B3100444967 /* ContentView.swift */,
 				F45693A52C2D9B3300444967 /* Assets.xcassets */,
-				F45693A72C2D9B3300444967 /* Preview Content */,
 			);
 			path = casinoslot;
-			sourceTree = "<group>";
-		};
-		F45693A72C2D9B3300444967 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F45693A82C2D9B3300444967 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		F45693B12C2D9B3300444967 /* casinoslotTests */ = {
@@ -125,6 +121,16 @@
 				F45693BE2C2D9B3300444967 /* casinoslotUITestsLaunchTests.swift */,
 			);
 			path = casinoslotUITests;
+			sourceTree = "<group>";
+		};
+		F45693CD2C2D9BA500444967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F45693CE2C2D9BBA00444967 /* HOMEVIEW.swift */,
+				F45693D02C2D9D1D00444967 /* HeaderView.swift */,
+				F45693D22C2DFCBA00444967 /* TabView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45693A92C2D9B3300444967 /* Preview Assets.xcassets in Resources */,
 				F45693A62C2D9B3300444967 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45693D32C2DFCBA00444967 /* TabView.swift in Sources */,
 				F45693A42C2D9B3100444967 /* ContentView.swift in Sources */,
 				F45693A22C2D9B3100444967 /* casinoslotApp.swift in Sources */,
+				F45693CF2C2D9BBA00444967 /* HOMEVIEW.swift in Sources */,
+				F45693D12C2D9D1D00444967 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
