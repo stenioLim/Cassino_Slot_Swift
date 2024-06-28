@@ -9,11 +9,13 @@ import SwiftUI
 
 
 struct TabView: View {
+    @ObservedObject var slot = Slipt()
+    @State private var number = 0
     
-   @State private var number = 0
     
     var body: some View {
         VStack {
+            
             HStack {
                 Button{
                   number += 10
@@ -23,14 +25,17 @@ struct TabView: View {
                         .font(.system(size:20))
                         .foregroundColor(Color("Color1"))
                         .fontWeight(.black)
-                        .padding(18)
+                        .padding(23)
                         .background{
                             Rectangle()
                                 .fill(LinearGradient(colors: [Color("BT3"),Color("BT4")], startPoint: .bottom, endPoint: .top))
-                                .shadow(color:Color("BT3"),radius: 10)
+                                .shadow(color:Color("BT3"),radius: 5)
                         }
                 }
-                Text("\(number)")
+                
+                Text("$\(number)")
+                    .font(.title)
+                    .fontWeight(.black)
                     .padding()
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
@@ -46,7 +51,7 @@ struct TabView: View {
                         .font(.system(size:20))
                         .foregroundColor(Color("Color1"))
                         .fontWeight(.black)
-                        .padding(18)
+                        .padding(23)
                         .background{
                             Rectangle()
                                 .fill(LinearGradient(colors: [Color("BT3"),Color("BT4")], startPoint: .bottom, endPoint: .top))
@@ -58,27 +63,31 @@ struct TabView: View {
                 
             }
             .background(Color("BGSETS"))
-            .cornerRadius(30)
+            //.cornerRadius(30)
                 
             HStack(spacing: 20){
                 
-                
-                Text("MAX \n BET")
-                    .font(.system(size: 13))
-                    .fontWeight(.black)
-                    .foregroundColor(Color("Color1"))
-                    .padding(15)
-                    .background{
-                        Circle()
-                            .fill(LinearGradient(colors: [Color("BT3"),Color("BT4")], startPoint: .bottom, endPoint: .top))
-                            .shadow(color:Color("BT3"),radius: 10)
-                            
-                    }
-                    
-                
-                Button{
-                    
+                Button {
+                    number += 100
                 }label: {
+                    Text("MAX \n BET")
+                        .font(.system(size: 13))
+                        .fontWeight(.black)
+                        .foregroundColor(Color("Color1"))
+                        .padding(15)
+                        .background{
+                            Circle()
+                                .fill(LinearGradient(colors: [Color("BT3"),Color("BT4")], startPoint: .bottom, endPoint: .top))
+                                .shadow(color:Color("BT3"),radius: 10)
+                                
+                        }
+                }
+                
+                    
+                
+                Button(
+                    action:{slot.spinReels()}
+                ,label: {
                     Text("Play")
                         .font(.system(size: 30))
                         .fontWeight(.black)
@@ -92,7 +101,7 @@ struct TabView: View {
                         }
                         
                     
-                }
+                })
                 
                
                 
@@ -113,7 +122,7 @@ struct TabView: View {
 
 
 #Preview {
-    TabView()
+    TabView(slot: Slipt())
         .background(.linearGradient(colors: [Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
         
 }

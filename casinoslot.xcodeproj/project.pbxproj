@@ -16,6 +16,9 @@
 		F45693CF2C2D9BBA00444967 /* HOMEVIEW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693CE2C2D9BBA00444967 /* HOMEVIEW.swift */; };
 		F45693D12C2D9D1D00444967 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D02C2D9D1D00444967 /* HeaderView.swift */; };
 		F45693D32C2DFCBA00444967 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D22C2DFCBA00444967 /* TabView.swift */; };
+		F45693D52C2EE2C900444967 /* AddBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D42C2EE2C900444967 /* AddBalanceView.swift */; };
+		F45693D72C2EF93B00444967 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D62C2EF93B00444967 /* SlotView.swift */; };
+		F45693DA2C2F235D00444967 /* ModelViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D92C2F235D00444967 /* ModelViewOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		F45693CE2C2D9BBA00444967 /* HOMEVIEW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOMEVIEW.swift; sourceTree = "<group>"; };
 		F45693D02C2D9D1D00444967 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F45693D22C2DFCBA00444967 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		F45693D42C2EE2C900444967 /* AddBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBalanceView.swift; sourceTree = "<group>"; };
+		F45693D62C2EF93B00444967 /* SlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
+		F45693D92C2F235D00444967 /* ModelViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		F45693A02C2D9B3100444967 /* casinoslot */ = {
 			isa = PBXGroup;
 			children = (
+				F45693D82C2F234800444967 /* ModelView */,
 				F45693CD2C2D9BA500444967 /* View */,
 				F45693A12C2D9B3100444967 /* casinoslotApp.swift */,
 				F45693A32C2D9B3100444967 /* ContentView.swift */,
@@ -129,8 +136,18 @@
 				F45693CE2C2D9BBA00444967 /* HOMEVIEW.swift */,
 				F45693D02C2D9D1D00444967 /* HeaderView.swift */,
 				F45693D22C2DFCBA00444967 /* TabView.swift */,
+				F45693D42C2EE2C900444967 /* AddBalanceView.swift */,
+				F45693D62C2EF93B00444967 /* SlotView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F45693D82C2F234800444967 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				F45693D92C2F235D00444967 /* ModelViewOne.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45693D72C2EF93B00444967 /* SlotView.swift in Sources */,
 				F45693D32C2DFCBA00444967 /* TabView.swift in Sources */,
+				F45693D52C2EE2C900444967 /* AddBalanceView.swift in Sources */,
+				F45693DA2C2F235D00444967 /* ModelViewOne.swift in Sources */,
 				F45693A42C2D9B3100444967 /* ContentView.swift in Sources */,
 				F45693A22C2D9B3100444967 /* casinoslotApp.swift in Sources */,
 				F45693CF2C2D9BBA00444967 /* HOMEVIEW.swift in Sources */,

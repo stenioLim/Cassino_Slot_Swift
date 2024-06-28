@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HOMEVIEW: View {
+    
+    @ObservedObject var slipt = Slipt()
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -16,14 +19,24 @@ struct HOMEVIEW: View {
                         
                         .background(.linearGradient(colors: [Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
                 }
-                Text("stenio")
+                Spacer()
+                SlotView(slipt: slipt)
+                    .background{
+                        Image("slot1")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 400)
+                }
+                    
                     
                 Spacer()
-                TabView()
+                TabView(slot: slipt)
                     .background(.linearGradient(colors: [Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
                     
             }
+            
         }
+        
     }
 }
 

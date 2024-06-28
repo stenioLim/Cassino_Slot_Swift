@@ -28,7 +28,7 @@ struct HeaderView: View {
                                         .padding(.trailing)
                                 }
                         }
-                            Text("R$ 100")
+                            Text("$ 100")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -37,7 +37,8 @@ struct HeaderView: View {
                     .padding(10)
                     .background{
                         RoundedRectangle(cornerRadius: 30, style: .continuous)
-                            .fill(.white).opacity(0.3)
+                            .fill(Color("BGSETS"))
+                            .shadow(color: Color(.green), radius: 5)
                     }
                 }
                 
@@ -67,15 +68,16 @@ struct HeaderView: View {
                     .padding(10)
                     .background{
                         RoundedRectangle(cornerRadius: 30, style: .continuous)
-                            .fill(.white).opacity(0.3)
+                            .fill(Color("BGSETS"))
+                            .shadow(color: Color(.red), radius: 5)
                     }
                 }
                 
             Spacer()
                 
                 HStack{
-                    Button{
-                    
+                    NavigationLink{
+                        AddBalanceView()
                     }label: {
                         Image(systemName: "line.3.horizontal.circle.fill")
                             .foregroundColor(.white)
@@ -91,7 +93,11 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
-        .background(Color(.black))
+    NavigationStack{
+        HeaderView()
+            .background(Color("BG"))
+    }
+    
+        
     
 }
