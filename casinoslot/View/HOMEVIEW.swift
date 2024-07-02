@@ -15,9 +15,9 @@ struct HOMEVIEW: View {
         NavigationStack{
             VStack{
                 HStack{
-                    HeaderView()
+                    HeaderView(slot: slipt)
                         
-                        .background(.linearGradient(colors: [Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
+                        
                 }
                 Spacer()
                 SlotView(slipt: slipt)
@@ -25,22 +25,24 @@ struct HOMEVIEW: View {
                         Image("slot1")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 400)
+                            .frame(width: 450)
                 }
                     
                     
                 Spacer()
                 TabView(slot: slipt)
-                    .background(.linearGradient(colors: [Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
+                    
                     
             }
-            
+            .background(.linearGradient(colors: [Color("BG"),Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
         }
+        
         
     }
 }
 
 #Preview {
     HOMEVIEW()
+    
        
 }

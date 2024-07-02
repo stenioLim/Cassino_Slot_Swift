@@ -10,6 +10,12 @@ import SwiftUI
 
 class Slipt: ObservableObject {
     
+    
+    @Published var balance1: Int = 100 // This value is a symbolic value to test the function.
+    @Published var balance2: Int = 0
+    @Published var Plot: Int = 0
+    
+    
     @Published  var reel1: String = "🍒"
     @Published  var  reel2: String = "🍋"
     @Published  var reel3: String = "🍊"
@@ -22,9 +28,26 @@ class Slipt: ObservableObject {
             reel3 = symbols.randomElement()!
             
             if reel1 == reel2 && reel2 == reel3 {
-                print("Parabéns! Você ganhou!")
+               Plot = balance2 * 20
+                balance1 += Plot
             } else {
                 print( "Tente novamente." )
             }
         }
+    
+    func addCash(){
+        balance2 += 10
+        balance1 -= 10
+        
+    }
+    
+    func reduceCash(){
+        
+            balance2 -= 10
+            balance1 += 10
+        
+        
+        
+    }
+    
 }

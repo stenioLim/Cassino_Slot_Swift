@@ -16,7 +16,7 @@ struct SlotView: View {
         
             VStack{
               
-                HStack(spacing: 35){
+                HStack(spacing: 39){
                     Text("\(slipt.reel1)")
                         .font(.system(size: 60))
                     Text("\(slipt.reel2)")
@@ -24,7 +24,7 @@ struct SlotView: View {
                     Text("\(slipt.reel3)")
                         .font(.system(size: 60))
                 }
-                
+            
                 .padding(.top, 80)
                 
                 

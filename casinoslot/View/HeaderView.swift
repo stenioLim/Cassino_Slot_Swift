@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @ObservedObject var slot = Slipt()
     var body: some View {
         NavigationStack {
             HStack(spacing:20){
@@ -28,7 +29,7 @@ struct HeaderView: View {
                                         .padding(.trailing)
                                 }
                         }
-                            Text("$ 100")
+                        Text("$ \(slot.balance1)")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -94,7 +95,7 @@ struct HeaderView: View {
 
 #Preview {
     NavigationStack{
-        HeaderView()
+        HeaderView(slot: Slipt())
             .background(Color("BG"))
     }
     

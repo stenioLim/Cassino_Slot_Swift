@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TabView: View {
     @ObservedObject var slot = Slipt()
-    @State private var number = 0
+    
     
     
     var body: some View {
@@ -18,7 +18,9 @@ struct TabView: View {
             
             HStack {
                 Button{
-                  number += 10
+                    slot.addCash()
+                    
+                    
                     
                 }label: {
                     Image(systemName: "plus.circle.fill")
@@ -33,7 +35,7 @@ struct TabView: View {
                         }
                 }
                 
-                Text("$\(number)")
+                Text("$\(slot.balance2)")
                     .font(.title)
                     .fontWeight(.black)
                     .padding()
@@ -41,10 +43,11 @@ struct TabView: View {
                     .frame(maxWidth: .infinity)
                 
                 Button{
-                    if number > 10 {
-                        number -= 5
+                    if slot.balance2 > 10 {
+                        slot.reduceCash()
                     }else {
-                        number = 0
+                        slot.balance2 = 0
+                        slot.balance1 += 10
                     }
                 }label: {
                     Image(systemName: "minus.circle.fill")
@@ -63,12 +66,12 @@ struct TabView: View {
                 
             }
             .background(Color("BGSETS"))
-            //.cornerRadius(30)
-                
+            .cornerRadius(30)
+            .padding()
             HStack(spacing: 20){
                 
                 Button {
-                    number += 100
+                    slot.balance2 += 100
                 }label: {
                     Text("MAX \n BET")
                         .font(.system(size: 13))
@@ -98,6 +101,7 @@ struct TabView: View {
                                 .fill(LinearGradient(colors: [Color("BT1"),Color("BT2")], startPoint: .bottom, endPoint: .top))
                                 .cornerRadius(40)
                                 .frame(width: 130, height: 80)
+                                .shadow(color:Color(.green),radius: 10)
                         }
                         
                     
