@@ -19,9 +19,6 @@ struct TabView: View {
             HStack {
                 Button{
                     slot.addCash()
-                    
-                    
-                    
                 }label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size:20))
@@ -47,7 +44,12 @@ struct TabView: View {
                         slot.reduceCash()
                     }else {
                         slot.balance2 = 0
-                        slot.balance1 += 10
+                        if slot.balance2 > 0 {
+                            slot.balance1 += 10
+                            
+                        }else {
+                            slot.balance1 = slot.balance1
+                        }
                     }
                 }label: {
                     Image(systemName: "minus.circle.fill")
@@ -61,9 +63,6 @@ struct TabView: View {
                                 .shadow(color:Color("BT3"),radius: 10)
                         }
                 }
-                
-                
-                
             }
             .background(Color("BGSETS"))
             .cornerRadius(30)
@@ -86,8 +85,6 @@ struct TabView: View {
                         }
                 }
                 
-                    
-                
                 Button(
                     action:{slot.spinReels()}
                 ,label: {
@@ -103,28 +100,11 @@ struct TabView: View {
                                 .frame(width: 130, height: 80)
                                 .shadow(color:Color(.green),radius: 10)
                         }
-                        
-                    
                 })
-                
-               
-                
-                
-                
             }
         }
-        
-        
-        
-        
-        
     }
-    
 }
-
-
-
-
 #Preview {
     TabView(slot: Slipt())
         .background(.linearGradient(colors: [Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))

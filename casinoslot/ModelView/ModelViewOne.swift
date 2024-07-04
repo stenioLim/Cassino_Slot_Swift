@@ -15,6 +15,8 @@ class Slipt: ObservableObject {
     @Published var balance2: Int = 0
     @Published var Plot: Int = 0
     
+    @Published var lifes: Int = 5
+    
     
     @Published  var reel1: String = "🍒"
     @Published  var  reel2: String = "🍋"
@@ -31,7 +33,16 @@ class Slipt: ObservableObject {
                Plot = balance2 * 20
                 balance1 += Plot
             } else {
-                print( "Tente novamente." )
+                if balance2 > 9 {
+                    lifes -= 1
+                }
+                
+                if lifes == 0 {
+                    balance2 = 0
+                    lifes += 5 
+                }else {
+                    lifes = lifes 
+                }
             }
         }
     

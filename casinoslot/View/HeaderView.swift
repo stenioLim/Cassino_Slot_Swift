@@ -60,7 +60,7 @@ struct HeaderView: View {
                                         .padding(.trailing)
                                 }
                         }
-                            Text("10")
+                        Text("\(slot.lifes)")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
