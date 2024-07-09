@@ -10,12 +10,9 @@ import SwiftUI
 struct SlotView: View {
     
     @State private var result: String = ""
-    
     @ObservedObject var slipt = Slipt()
     var body: some View {
-        
             VStack{
-              
                 HStack(spacing: 39){
                     Text("\(slipt.reel1)")
                         .font(.system(size: 60))
@@ -24,20 +21,9 @@ struct SlotView: View {
                     Text("\(slipt.reel3)")
                         .font(.system(size: 60))
                 }
-            
                 .padding(.top, 80)
-                
-                
-                
             }
-            
-       
-        
-        
-            
     }
-    
-    
 }
 
 #Preview {

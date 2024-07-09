@@ -19,6 +19,8 @@
 		F45693D52C2EE2C900444967 /* AddBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D42C2EE2C900444967 /* AddBalanceView.swift */; };
 		F45693D72C2EF93B00444967 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D62C2EF93B00444967 /* SlotView.swift */; };
 		F45693DA2C2F235D00444967 /* ModelViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693D92C2F235D00444967 /* ModelViewOne.swift */; };
+		F45693DC2C3C6F8B00444967 /* headerUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693DB2C3C6F8B00444967 /* headerUser.swift */; };
+		F45693DE2C3C8EDC00444967 /* DepositView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45693DD2C3C8EDC00444967 /* DepositView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		F45693D42C2EE2C900444967 /* AddBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBalanceView.swift; sourceTree = "<group>"; };
 		F45693D62C2EF93B00444967 /* SlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		F45693D92C2F235D00444967 /* ModelViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewOne.swift; sourceTree = "<group>"; };
+		F45693DB2C3C6F8B00444967 /* headerUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerUser.swift; sourceTree = "<group>"; };
+		F45693DD2C3C8EDC00444967 /* DepositView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				F45693D22C2DFCBA00444967 /* TabView.swift */,
 				F45693D42C2EE2C900444967 /* AddBalanceView.swift */,
 				F45693D62C2EF93B00444967 /* SlotView.swift */,
+				F45693DB2C3C6F8B00444967 /* headerUser.swift */,
+				F45693DD2C3C8EDC00444967 /* DepositView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +293,8 @@
 				F45693A22C2D9B3100444967 /* casinoslotApp.swift in Sources */,
 				F45693CF2C2D9BBA00444967 /* HOMEVIEW.swift in Sources */,
 				F45693D12C2D9D1D00444967 /* HeaderView.swift in Sources */,
+				F45693DC2C3C6F8B00444967 /* headerUser.swift in Sources */,
+				F45693DE2C3C8EDC00444967 /* DepositView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
