@@ -49,7 +49,7 @@ struct DepositView: View {
                     
                     
                 }
-                .padding(50)
+                .padding(30)
             HStack{
                 Text("Transation:")
                     .font(.title).bold()

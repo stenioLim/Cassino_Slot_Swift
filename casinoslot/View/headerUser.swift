@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct headerUser: View {
+    
+    var img = URL(string: "https://images.unsplash.com/photo-1610088441520-4352457e7095?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    
     var body: some View {
         HStack{
-            Circle()
-                .fill(.gray)
-                .frame(width: 80 )
+            AsyncImage(url: img) { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 60, height: 60)
+                    .cornerRadius(50)
+                
+            }placeholder: {
+                ProgressView()
+            }
             VStack(alignment: .leading){
                 Text("Frank G") // get the name from the person's registration (we will use Swift Data)
                     .font(.title).bold()

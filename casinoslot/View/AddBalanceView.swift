@@ -12,13 +12,16 @@ struct AddBalanceView: View {
         NavigationStack{
             VStack{
                 headerUser()
-                    .background(Color("BG"))
+                    .padding(.bottom)
+                
 
                 DepositView()
-                    
+                    .padding(.top)
                 Spacer()
             }
-            .background(Color("BG"))
+            .background(.linearGradient(colors: [Color("BG"),Color("BG").opacity(0.7),Color("BG")], startPoint: .top, endPoint: .bottom))
+            
+            
         }
         
         
